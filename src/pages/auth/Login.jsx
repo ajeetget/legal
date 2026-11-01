@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import { Mail, Phone, ArrowLeft } from "lucide-react";
 import AuthLayout from "../../layouts/AuthLayout";
 import "./Auth.css";
@@ -11,6 +11,7 @@ function Login() {
   const [success, setSuccess] = useState("");
   const [otpSent, setOtpSent] = useState(false);
   const [loginType, setLoginType] = useState("");
+  const navigate = useNavigate();
 
   // Detect whether the input is an email or phone number
   const getLoginType = (value) => {
@@ -76,7 +77,8 @@ function Login() {
     setErrors({});
 
     // Connect OTP verification API here.
-    setSuccess("OTP verification API needs to be connected.");
+   //setSuccess("OTP verification API needs to be connected.");
+     navigate("/services");
   };
 
   // Change email or phone number
@@ -164,11 +166,8 @@ function Login() {
             Verify & Login
           </button>
 
-          <button
-            type="button"
-            className="change-number-button"
-            onClick={handleChangeNumber}
-          >
+          <button type="button" className="change-number-button"
+            onClick={handleChangeNumber}>
             <ArrowLeft size={16} />
             Change Email or Phone
           </button>

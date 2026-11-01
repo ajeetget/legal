@@ -1,7 +1,8 @@
 
 import { Link } from "react-router-dom";
-import { FileSearch, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import "./ServiceCard.css";
+
 
 function ServiceCard({
   title,
