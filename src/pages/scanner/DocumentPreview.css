@@ -1,0 +1,53 @@
+.document-preview {
+  margin-top: 35px;
+}
+
+.document-preview h2 {
+  color: var(--text);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.preview-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.preview-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  background: #f5f3f7;
+  display: block;
+}
+
+.preview-info {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.preview-info span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.preview-info small {
+  color: var(--text-muted);
+}
+
+.preview-error {
+  color: #DC2626;
+  font-size: 14px;
+}

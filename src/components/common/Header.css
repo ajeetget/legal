@@ -1,0 +1,97 @@
+
+.main-header {
+  width: 100%;
+  background: var(--white);
+  padding: 14px 30px;
+  box-shadow: 0 2px 12px rgba(48, 40, 58, 0.05);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.header-logo-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-link {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.profile-button,
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logout-button {
+  background: var(--primary);
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.logout-button:hover {
+  background: var(--primary-hover);
+}
+
+@media (max-width: 600px) {
+  .main-header {
+    padding: 12px 15px;
+  }
+
+  .header-logo {
+    font-size: 19px;
+  }
+
+  .header-nav {
+    gap: 12px;
+  }
+
+  .profile-button span,
+  .nav-link {
+    display: none;
+  }
+
+  .logout-button {
+    padding: 9px;
+  }
+
+  .logout-button span {
+    display: none;
+  }
+}

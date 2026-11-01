@@ -1,0 +1,262 @@
+
+.extracted-results {
+  margin-top: 35px;
+}
+
+.extracted-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.extracted-header h2 {
+  color: var(--text);
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.extracted-header p {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.download-all-button,
+.extracted-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 13px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.download-all-button {
+  background: var(--lavender);
+  color: var(--text);
+}
+
+.extracted-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.extracted-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.extracted-card h3 {
+  color: var(--text);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.extracted-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.extracted-actions button {
+  background: #f5f0fa;
+  color: var(--text);
+}
+
+.extracted-card pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.download-all-button:hover,
+.extracted-actions button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .extracted-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .extracted-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.extracted-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.download-pdf-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 13px;
+  border: none;
+  border-radius: 8px;
+  background: var(--lavender);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.download-pdf-button:hover {
+  opacity: 0.8;
+}
+
+.pdf-document-title {
+  display: none;
+}
+
+/* PDF / Print styling */
+@media print {
+  @page {
+    size: A4;
+    margin: 18mm;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .pdf-export-content,
+  .pdf-export-content * {
+    visibility: visible !important;
+  }
+
+  .pdf-export-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .pdf-document-title {
+    display: block;
+    color: #000000 !important;
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .extracted-card {
+    background: #ffffff !important;
+    border: 1px solid #dddddd !important;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .extracted-card h3,
+  .extracted-card pre {
+    color: #000000 !important;
+  }
+
+  .extracted-card pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .extracted-card-header {
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 10px;
+  }
+
+  .extracted-actions,
+  .extracted-header,
+  .download-all-button,
+  .download-pdf-button {
+    display: none !important;
+  }
+}
+
+.extracted-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  color: var(--text-muted);
+}
+
+.extracted-search:focus-within {
+  border-color: var(--lavender);
+}
+
+.extracted-search input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.extracted-search input::placeholder {
+  color: var(--text-muted);
+}
+
+.extracted-search button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.search-results-count {
+  margin-bottom: 15px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.no-search-results {
+  padding: 40px 15px;
+  text-align: center;
+  color: var(--text-muted);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.no-search-results h3 {
+  margin: 12px 0 6px;
+  color: var(--text);
+  font-size: 16px;
+}
+
+.no-search-results p {
+  font-size: 13px;
+}
+
